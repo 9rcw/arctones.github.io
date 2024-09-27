@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>arctones</title>
+    <title>arctones | home</title>
     <style>
         /* General body styling */
         body {
@@ -16,26 +16,23 @@
             background-color: #f0f0f0;
         }
 
-        /* Ensure the image is responsive and scales to the screen size */
+        /* Ensure the image is responsive and scales to screen size */
         img {
-            width: 100vw; /* Takes full viewport width */
-            height: 100vh; /* Takes full viewport height */
+            width: 100vw; /* Full viewport width */
+            height: 100vh; /* Full viewport height */
             object-fit: cover; /* Ensures the image covers the container */
-        }
-
-        /* Media query for smaller screens (phones) */
-        @media (max-width: 768px) {
-            img {
-                width: 100vw; /* Full width of the phone screen */
-                height: 100vh; /* Full height of the phone screen */
-                object-fit: cover; /* Ensures the image covers the container */
-            }
         }
     </style>
 </head>
 <body>
 
-    <img src="LANDER.png">
+    <!-- Picture element to handle different images for desktop and mobile -->
+    <picture>
+        <!-- Mobile Image for screens up to 768px -->
+        <source srcset="LANDER-MOB.png" media="(max-width: 768px)">
+        <!-- Desktop Image for larger screens -->
+        <img src="LANDER.png">
+    </picture>
 
 </body>
 </html>
