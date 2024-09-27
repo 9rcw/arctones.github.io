@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lander Image</title>
+    <style>
+        /* General body styling */
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        /* Ensure the image is responsive */
+        img {
+            width: 100%;
+            height: auto;
+            max-width: 1920px;
+            max-height: 1080px;
+            object-fit: cover;
+        }
+
+        /* Media query for smaller screens (phones) */
+        @media (max-width: 768px) {
+            img {
+                width: 100vw; /* Full width of the phone screen */
+                height: auto; /* Keep the aspect ratio */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <img src="lander.png">
+
+</body>
+</html>
