@@ -6,21 +6,34 @@
     <title>arctones | home</title>
     <style>
         /* General body styling */
-        body {
+        html, body {
             margin: 0;
             padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden; /* Prevent scrolling */
+        }
+
+        body {
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
             background-color: #f0f0f0;
         }
 
-        /* Ensure the image is responsive and scales to screen size */
-        img {
-            width: 100vw; /* Full viewport width */
+        /* Picture container styling */
+        picture, img {
+            width: 100vw;  /* Full viewport width */
             height: 100vh; /* Full viewport height */
-            object-fit: cover; /* Ensures the image covers the container */
+            object-fit: cover; /* Ensures the image fills the viewport without distortion */
+        }
+
+        /* Media query for smaller screens (mobile) */
+        @media (max-width: 768px) {
+            picture, img {
+                width: 100vw;  /* Full width of mobile screen */
+                height: 100vh; /* Full height of mobile screen */
+            }
         }
     </style>
 </head>
